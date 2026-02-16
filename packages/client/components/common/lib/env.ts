@@ -13,7 +13,7 @@ export default {
    */
   DEFAULT_API_URL,
   /**
-   * Whether this is Stoat
+   * Whether this is Assembl
    */
   IS_STOAT: [
     // historically...

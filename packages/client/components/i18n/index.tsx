@@ -4,7 +4,10 @@ import { I18nProvider as LinguiProvider } from "@lingui-solid/solid";
 import { i18n } from "@lingui/core";
 
 import { type LocaleOptions, Language, Languages } from "./Languages";
-import { messages as en } from "./catalogs/en/messages";
+import * as enCatalog from "./catalogs/en/messages";
+// Lingui compiled catalogs may export either `messages` or `default` depending on config/output.
+const en = (enCatalog as any).messages ?? (enCatalog as any).default ?? (enCatalog as any);
+
 import { initTime, loadTimeLocale } from "./dayjs";
 
 export function I18nProvider(props: { children: JSX.Element }) {
