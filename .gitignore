@@ -9,3 +9,9 @@ dist
 .vercel
 
 .idea
+
+# local pnpm store (vps)
+.pnpm-store/
+
+# local backups
+Dockerfile.bak.*
